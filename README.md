@@ -42,6 +42,7 @@ pip install pandas requests numpy python-dateutil bizdays
 ```
 
 ### 2. Set Up Credentials
+See anbimaAuth_example.json for reference.
 ```bash
 {
   "client_id": "YOUR_CLIENT_ID",
