@@ -1,4 +1,19 @@
 import requests
+"""
+This module provides functionality to authenticate and fetch data from the ANBIMA API, specifically for retrieving and analyzing secondary market prices of public government bonds. It includes:
+Classes:
+    anbima_api: Handles authentication (token management) and data retrieval from the ANBIMA API.
+Functions:
+    volatility(df, asset_tp): Calculates the annualized volatility of a specified asset type using the standard deviation of daily log-returns from indicative rates.
+    main(): Orchestrates the process of fetching data for a range of business days, compiling it into a DataFrame, and computing volatility for a specific asset type.
+Usage:
+    - The script uses a credentials file (JSON) to manage API authentication.
+    - It leverages the 'bizdays' library to handle business day calculations using the ANBIMA calendar.
+    - Data is fetched for a specified range of business days and analyzed for volatility.
+    - The script is designed for both sandbox and production environments of the ANBIMA API.
+Note:
+    The ANBIMA API sandbox environment returns static data for all dates, so volatility calculations will yield zero. The code is structured for use with the production environment, where real data will provide meaningful results.
+"""
 import pandas as pd
 import json
 from datetime import datetime
